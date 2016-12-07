@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.yoursquare.dao.mappers.*;
+import com.example.yoursquare.dao.uow.IUnitOfWork;
 import com.example.yoursquare.model.IHaveId;
 
 public abstract class RepositoryBase<TEntity extends IHaveId> implements IRepository<TEntity> {
@@ -27,7 +28,8 @@ public abstract class RepositoryBase<TEntity extends IHaveId> implements IReposi
 	protected IMapResultSetIntoEntity<TEntity> mapper;
 
 	protected RepositoryBase(Connection connection, 
-			IMapResultSetIntoEntity<TEntity> mapper) {
+			IMapResultSetIntoEntity<TEntity> mapper,
+			IUnitOfWork uow) {
 		this.connection = connection;
 		this.mapper = mapper;
 		try {
@@ -45,10 +47,10 @@ public abstract class RepositoryBase<TEntity extends IHaveId> implements IReposi
 		}
 	}
 
-	public TEntity get(int personId){
+	public TEntity get(int userId){
 		try{
 			
-			selectById.setInt(1, personId);
+			selectById.setInt(1, userId);
 			ResultSet rs = selectById.executeQuery();
 			while(rs.next()){
 				return mapper.map(rs);

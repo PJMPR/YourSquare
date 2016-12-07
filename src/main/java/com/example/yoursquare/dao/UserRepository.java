@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.example.yoursquare.dao.mappers.*;
+import com.example.yoursquare.dao.uow.IUnitOfWork;
 import com.example.yoursquare.model.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,13 +13,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-public class UserRepository extends RepositoryBase<User> {
+public class UserRepository extends RepositoryBase<User> implements IUserRepository {
 	
 	
-	public UserRepository(Connection connection, IMapResultSetIntoEntity<User> mapper) {
-		super(connection, mapper);
+	public UserRepository(Connection connection,
+			IMapResultSetIntoEntity<User> mapper,
+			IUnitOfWork uow) {
+		super(connection, mapper, uow);
 	}
-	
+
 	@Override
 	protected String tableName() {
 		return "user";
@@ -81,5 +84,10 @@ public class UserRepository extends RepositoryBase<User> {
 		update.setInt(11, entity.getId());
 		
 }
+
+	public List<User> withName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

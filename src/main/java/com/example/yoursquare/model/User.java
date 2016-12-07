@@ -1,7 +1,5 @@
 package com.example.yoursquare.model;
 
-import java.util.List;
-
 public class User implements IHaveId {
 	
 	private int id;

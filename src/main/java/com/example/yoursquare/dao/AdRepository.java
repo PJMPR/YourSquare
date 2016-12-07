@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.example.yoursquare.dao.mappers.*;
+import com.example.yoursquare.dao.uow.IUnitOfWork;
 import com.example.yoursquare.model.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,11 +13,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-public class AdRepository extends RepositoryBase<Ad> {
+public class AdRepository extends RepositoryBase<Ad> implements IAdRepository {
 
 
-	protected AdRepository(Connection connection, IMapResultSetIntoEntity<Ad> mapper) {
-		super(connection, mapper);
+	public AdRepository(Connection connection,
+			IMapResultSetIntoEntity<Ad> mapper,
+			IAdRepository IAdRepository, IUnitOfWork uow) {
+		super(connection, mapper, uow);
 	}
 	
 	@Override
@@ -96,5 +99,10 @@ public class AdRepository extends RepositoryBase<Ad> {
 		//update.setEnum(rs.getEnum("property"));
 		
 }
+
+	public List<Ad> byUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
