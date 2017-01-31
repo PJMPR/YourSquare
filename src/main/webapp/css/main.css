@@ -1,0 +1,201 @@
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+.logo {
+    position: relative; left: 240px; top: 165px;
+    width: 400px;
+    height: 133px;
+}
+.login {
+    position: absolute; left: 250px; bottom: 275px;
+    width: 200px;
+    height: 58px;
+    background: transparent url(../img/login.png) no-repeat;
+}
+.login:hover {
+    background-image: url(../img/login_h.png);
+}
+.register {
+    position: absolute; left: 470px; bottom: 275px;
+    width: 200px;
+    height: 58px;
+    background: transparent url(../img/register.png) no-repeat;
+}
+.register:hover {
+    background-image: url(../img/register_h.png);
+}
+.footer {
+    position: absolute; left: 360px; bottom: 120px;
+    color: white;
+    font-size: 12px;
+}
+@font-face {
+    font-family: Proxima Nova Rg;
+    src: url("../font.otf");
+}
+
+.register-form-font {
+    position: fixed; left: 722px; top: 260px;
+    margin-top: 75px;
+    cursor: default;
+}
+
+.ad-form-font {
+    position: fixed; left: 400px; top: 260px;
+    margin-top: 75px;
+    cursor: default;
+}
+
+.login-form-font {
+    position: fixed; left: 422px; top: 260px;
+    margin-top: 75px;
+    cursor: default;
+}
+
+.register-form-font {
+    position: fixed; left: 420px; top: 260px;
+    margin-top: 75px;
+    cursor: default;
+}
+
+.register-form {
+    position: relative; left: 330px; top: 100px;
+    width: 200px;
+    height: 260px;
+    padding: 15px 25px 0px 25px;
+    margin-top: 75px;
+    cursor: default;
+
+    background-color: #141517;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+    box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+}
+
+.register-form:before {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+
+    width: 0px;
+    height: 0px;
+    content: '';
+
+    border-bottom: 10px solid #141517;
+    border-right: 10px solid #141517;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+
+.login-form {
+     position: relative; left: 330px; top: 100px;
+     width: 200px;
+     height: 200px;
+     padding: 15px 25px 0 25px;
+     margin-top: 75px;
+     cursor: default;
+
+     background-color: #141517;
+
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+
+     -webkit-box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+     -moz-box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+     box-shadow: 0px 1px 1px 0px rgba(255,255,255, .2), inset 0px 1px 1px 0px rgb(0,0,0);
+ }
+
+.login-form:before {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+
+    width: 0px;
+    height: 0px;
+    content: '';
+
+    border-bottom: 10px solid #141517;
+    border-right: 10px solid #141517;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+input#login2    {
+    background:url(../img/login2.png);
+    background-repeat: no-repeat;
+    width:100px;
+    height:29px;
+    border: 0;
+    position: relative; left: 50px;
+    margin-top: 55px;
+}
+
+input#login2:hover    {
+    background: url(../img/login2_h.png);
+}
+
+input#ad    {
+    background:url(../img/add.png);
+    background-repeat: no-repeat;
+    width:100px;
+    height:29px;
+    border: 0;
+    position: relative; left: 50px;
+    margin-top: 55px;
+}
+
+input#ad:hover    {
+    background: url(../img/add_h.png);
+}
+
+input#register2    {
+    background:url(../img/register2.png);
+    background-repeat: no-repeat;
+    width:100px;
+    height:29px;
+    border: 0;
+    position: relative; left: 50px;
+    margin-top: 50px;
+}
+
+input#register2:hover    {
+    background: url(../img/register2_h.png);
+}
+
+.login-form input[type=email],
+.login-form input[type=password],
+.ad-form input[type=text],
+.register-form input[type=number],
+.register-form input[type=text],
+.register-form input[type=email],
+.register-form input[type=password] {
+    line-height: 14px;
+    margin: 40px 0px -30px;
+    padding: 6px 15px;
+    border: 0px;
+    outline: none;
+
+    font-family: Proxima Nova Rg,;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px rgba(255,255,255, .2);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
